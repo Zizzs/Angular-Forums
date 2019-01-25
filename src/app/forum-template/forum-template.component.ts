@@ -31,14 +31,9 @@ export class ForumTemplateComponent implements OnInit {
     this.threadsAll = this.threadService.getThreads();
   }
 
-  // filterThreads(threadsAll) {
-  //   debugger;
-  //   for(let thread of threadsAll) {
-  //     if (threadsAll.topic === this.forumHeader) {
-  //       this.threads.push(thread);
-  //     }
-  //   }
-  // }
+  goToDetailPage(clickedThread) {
+    this.router.navigate(['topics/forum/:id', clickedThread.$key]);
+  }
   goToPostPage() {
     let navigationExtras: NavigationExtras = {
       queryParams: {

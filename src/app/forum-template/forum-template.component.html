@@ -5,12 +5,11 @@
 </div>
 <div id="fixedBody">
   <div *ngFor="let thread of threadsAll | async" id="forumCards">
-    <div class="card">
+    <div (click)="goToDetailPage(thread)" class="card">
       <div class="card-body">
         <h5 class="card-title">{{thread.title}}</h5>
         <p>{{thread.body}}</p>
         <p>{{thread.user}}</p>
-       
       </div>  
     </div>
   </div>

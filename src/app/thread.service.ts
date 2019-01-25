@@ -23,5 +23,9 @@ export class ThreadService {
     this.threads.push(newThread);
   }
 
+  getThreadById(threadId: string){
+    return this.database.object('threads/' + threadId);
+  }
+
 
 }
