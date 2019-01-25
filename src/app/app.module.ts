@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainBlockComponent } from './main-block/main-block.component';
 import { FooterComponent } from './footer/footer.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { TopicsComponent } from './topics/topics.component';
 
 
 //Add new Components to the declarations to initialize and add a component.
@@ -17,7 +19,9 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     SideBarComponent,
     MainBlockComponent,
-    FooterComponent
+    FooterComponent,
+    WelcomeComponent,
+    TopicsComponent
   ],
 
   // Add modules to the imports.
