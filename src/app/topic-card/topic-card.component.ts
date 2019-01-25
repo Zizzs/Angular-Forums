@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-technology-card',
@@ -13,13 +14,16 @@ export class TopicCardComponent implements OnInit {
   ngOnInit() {
   }
   
-  topicCard = {
-    name_technology: "Technology",
-    description_technology: "A place to post and discuss latest technology trends."
-  }
+  topicCard = AppComponent.topicCards;
   
-  goToTopicsForum() {
-    this.router.navigate(["topics/forum"])
+  goToTechnologyForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_technology,
+        "description": this.topicCard.description_technology
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
   }
 
 

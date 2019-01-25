@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-technology-forum',
@@ -7,13 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForumTemplateComponent implements OnInit {
 
-  constructor() { }
+  forumHeader = "";
+  forumDescription = "";
+
+  constructor(private route: ActivatedRoute) { 
+    this.route.queryParams.subscribe(params => {
+      this.forumHeader = params["header"];
+      this.forumDescription = params["description"];
+    })
+  }
 
   ngOnInit() {
   }
 
   
-  forumHeader = "Test Header";
+  
   forumPostsDisplayBody;
   forumPosts = {
     header: "This is a test post.",

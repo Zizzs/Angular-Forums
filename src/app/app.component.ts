@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Forums';
+
+  public static topicCards = {
+    name_technology: "Technology",
+    description_technology: "A place to post and discuss latest technology trends."
+  }
 }
