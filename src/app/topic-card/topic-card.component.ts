@@ -3,7 +3,7 @@ import { Router, NavigationExtras } from '@angular/router';
 import { AppComponent } from '../app.component';
 
 @Component({
-  selector: 'app-technology-card',
+  selector: 'app-topic-card',
   templateUrl: './topic-card.component.html',
   styleUrls: ['./topic-card.component.css']
 })

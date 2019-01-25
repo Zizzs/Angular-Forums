@@ -1,16 +1,20 @@
-<div>
+<div id="fixedHeader">
   <p id="forumHeader">{{forumHeader}}</p>
   <p id="forumDescription">{{forumDescription}}</p>
   <hr>
 </div>
-
-<div *ngFor="let post of posts" id="forumCards">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">{{forumPosts.header}}</h5>
-      <p class="card-text">{{forumPosts.body}}</p>
-    </div>  
+<div id="fixedBody">
+  <div *ngFor="let post of posts" id="forumCards">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{forumPosts.header}}</h5>
+        <p class="card-text">{{forumPosts.body}}</p>
+      </div>  
+    </div>
   </div>
+</div>
+<div id="fixedFooter">
+  <p>Post</p>
 </div>
 
 
