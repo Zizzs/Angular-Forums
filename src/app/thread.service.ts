@@ -16,6 +16,9 @@ export class ThreadService {
     return this.threads;
   }
 
+  addThread(newThread: Thread) {
+    this.threads.push(newThread);
+  }
 
 
 }

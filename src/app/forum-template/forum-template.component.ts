@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ThreadService } from '../thread.service';
 
@@ -29,7 +29,12 @@ export class ForumTemplateComponent implements OnInit {
   }
 
   goToPostPage() {
-    this.router.navigate(['topics/forum/postthread']);
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.forumHeader,
+      }
+    };
+    this.router.navigate(['topics/forum/postthread'], navigationExtras);
   }
   
   // forumPostsDisplayBody;
