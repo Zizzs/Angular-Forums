@@ -32,8 +32,9 @@ export class ForumTemplateComponent implements OnInit {
   }
 
   goToDetailPage(clickedThread) {
-    this.router.navigate(['topics/forum/:id', clickedThread.$key]);
+    this.router.navigate(['topics/forum', clickedThread.$key]);
   }
+
   goToPostPage() {
     let navigationExtras: NavigationExtras = {
       queryParams: {
