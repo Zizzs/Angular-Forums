@@ -1,0 +1,15 @@
+<div id="forumHeader">
+  <p>{{forumHeader}}</p>
+  <hr>
+</div>
+
+<div *ngFor="let post of posts" id="forumCards">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{forumPosts.header}}</h5>
+      <p class="card-text">{{forumPosts.body}}</p>
+    </div>  
+  </div>
+</div>
+
+

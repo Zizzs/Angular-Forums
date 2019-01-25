@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TechnologyForumComponent } from './technology-forum.component';
+import { ForumTemplateComponent } from './forum-template.component';
 
 describe('TechnologyForumComponent', () => {
-  let component: TechnologyForumComponent;
-  let fixture: ComponentFixture<TechnologyForumComponent>;
+  let component: ForumTemplateComponent;
+  let fixture: ComponentFixture<ForumTemplateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TechnologyForumComponent ]
+      declarations: [ ForumTemplateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TechnologyForumComponent);
+    fixture = TestBed.createComponent(ForumTemplateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
