@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }  from '@angular/forms';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { routing } from './app.routing';
 
@@ -15,6 +18,12 @@ import { TopicCardComponent } from './topic-card/topic-card.component';
 import { ForumTemplateComponent } from './forum-template/forum-template.component';
 import { CreateThreadComponent } from './create-thread/create-thread.component';
 
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 //Add new Components to the declarations to initialize and add a component.
 @NgModule({
@@ -35,7 +44,9 @@ import { CreateThreadComponent } from './create-thread/create-thread.component';
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

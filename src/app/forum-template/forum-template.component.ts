@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import { Router } from '@angular/router';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-technology-forum',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./forum-template.component.css']
 })
 export class ForumTemplateComponent implements OnInit {
-
+  threads: FirebaseListObservable<any[]>;
   forumHeader = "";
   forumDescription = "";
 
@@ -26,11 +27,11 @@ export class ForumTemplateComponent implements OnInit {
     this.router.navigate(['topics/forum/postthread']);
   }
   
-  forumPostsDisplayBody;
-  forumPosts = {
-    header: "This is a test post.",
-    body: "This is a test body. Please excuse the terrible design work. It's slowly coming along, i'm hoping it turns into something really cool.",
-  }
+  // forumPostsDisplayBody;
+  // forumPosts = {
+  //   header: "This is a test post.",
+  //   body: "This is a test body. Please excuse the terrible design work. It's slowly coming along, i'm hoping it turns into something really cool.",
+  // }
 
-  posts = [this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts]
+  // posts = [this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts]
 }

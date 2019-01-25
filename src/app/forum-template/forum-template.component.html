@@ -4,11 +4,11 @@
   <hr>
 </div>
 <div id="fixedBody">
-  <div *ngFor="let post of posts" id="forumCards">
+  <div *ngFor="let thread of threads | async" id="forumCards">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">{{forumPosts.header}}</h5>
-        <p class="card-text">{{forumPosts.body}}</p>
+        <h5 class="card-title">{{thread.title}}</h5>
+        <p class="card-text">{{tread.body}}</p>
       </div>  
     </div>
   </div>
