@@ -1,9 +1,15 @@
-# _Angular Boilerplate w/ Routing_
+# _Forum Template_
 
-#### _A standard angular boilerplate setup with dynamic routing implemented.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+#### A forum template that uses angular to speed up the ability to read/write forum posts.
 
 #### By _**Alex Williams**_
+
+## Specs and Features
+    1. The user must be able to enter the website and have a clear understanding of where to navigate to find a forum they want to view.
+
+    2. The user should be able to either create an account and keep all post history on their account, or be able to post anonymously without post saving.
+
+    3. The user must be able to read, preview, and edit all comments commited to forum posts. 
 
 ## Development server
 
