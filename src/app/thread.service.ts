@@ -9,7 +9,7 @@ export class ThreadService {
   threads: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) { 
-    this.threads = database.list('threads');
+    this.threads = this.database.list('threads');
   }
 
   getThreads() {
