@@ -1,8 +1,10 @@
 #sideBarDiv {
-    border: 3px solid black;
+    border: 2px solid #C0B283;
     margin-top: 15px;
     height: 725px;
     width: 100%;
+    background-color: #F4F4F4;
+    color: #373737;
 }
 
 * {box-sizing: border-box}

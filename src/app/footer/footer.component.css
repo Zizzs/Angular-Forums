@@ -3,7 +3,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    border-top: 3px solid black;
+    border-top: 2px solid #C0B283;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: #F4F4F4;
  }
