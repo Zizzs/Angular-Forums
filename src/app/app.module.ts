@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }  from '@angular/forms';
 
 import { routing } from './app.routing';
 
@@ -33,7 +34,8 @@ import { CreateThreadComponent } from './create-thread/create-thread.component';
   // Add modules to the imports.
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

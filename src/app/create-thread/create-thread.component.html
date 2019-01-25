@@ -1,3 +1,30 @@
-<p>
-  post works!
-</p>
+<div class="card card-default">
+    <div class="card-heading">
+        <h3 class="card-title">Create a Thread</h3>
+    </div>
+    <div class="card-body">
+        <div>
+        <div>
+            <label>User Name:</label>
+            <br>
+            <input [(ngModel)]="userName" #newUser>
+        </div>
+        <div>
+            <label>Thread Title:</label>
+            <br>
+            <input [(ngModel)]="title" #newTitle>
+        </div>
+    
+        <div>
+            <label>Thread Body:</label>
+            <br>
+            <textarea [(ngModel)]="body" id="textArea" #newBody></textarea>
+        </div>
+        <button (click)="createThread(newUser.value, newTitle.value, newBody.value); newUser.value=''; newTitle.value=''; newBody.value=''">Add</button>    </div>
+    </div>
+</div>
+
+<p>Preview:</p>
+<p>{{userName}}</p>
+<p>{{title}}</p>
+<p>{{body}}</p>

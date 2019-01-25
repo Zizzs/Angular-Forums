@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Thread } from '../models/thread.model'
 
 @Component({
   selector: 'app-post',
@@ -12,4 +13,7 @@ export class CreateThreadComponent implements OnInit {
   ngOnInit() {
   }
 
+  createThread() {
+    
+  }
 }
