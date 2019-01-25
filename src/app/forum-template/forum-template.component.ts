@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import { Router, NavigationExtras } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ThreadService } from '../thread.service';
+import { Thread } from '../models/thread.model';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { ThreadService } from '../thread.service';
 })
 export class ForumTemplateComponent implements OnInit {
   threads: FirebaseListObservable<any[]>;
+  threadsAll: FirebaseListObservable<any[]>;
   forumHeader = "";
   forumDescription = "";
 
@@ -24,10 +26,19 @@ export class ForumTemplateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.threads = this.threadService.getThreads();
-    console.log(this.threads);
+    this.threadsAll = this.threadService.getThreads();
+
+    this.filterThreads(this.threadsAll);
   }
 
+  filterThreads(threadsAll) {
+    debugger;
+    for(let thread of threadsAll) {
+      if (threadsAll.topic === this.forumHeader) {
+        this.threads.push(thread);
+      }
+    }
+  }
   goToPostPage() {
     let navigationExtras: NavigationExtras = {
       queryParams: {
@@ -36,12 +47,4 @@ export class ForumTemplateComponent implements OnInit {
     };
     this.router.navigate(['topics/forum/postthread'], navigationExtras);
   }
-  
-  // forumPostsDisplayBody;
-  // forumPosts = {
-  //   header: "This is a test post.",
-  //   body: "This is a test body. Please excuse the terrible design work. It's slowly coming along, i'm hoping it turns into something really cool.",
-  // }
-
-  // posts = [this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts]
 }
