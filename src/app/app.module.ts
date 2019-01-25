@@ -1,14 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { routing } from './app.routing';
 
+import { AppComponent } from './app.component';
+import { ExampleComponent } from './example/example.component';
+
+
+//Add new Components to the declarations to initialize and add a component.
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExampleComponent
   ],
+
+  // Add modules to the imports.
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
