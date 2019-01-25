@@ -10,6 +10,8 @@ import { MainBlockComponent } from './main-block/main-block.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TopicsComponent } from './topics/topics.component';
+import { TechnologyCardComponent } from './technology-card/technology-card.component';
+import { TechnologyForumComponent } from './technology-forum/technology-forum.component';
 
 
 //Add new Components to the declarations to initialize and add a component.
@@ -21,7 +23,9 @@ import { TopicsComponent } from './topics/topics.component';
     MainBlockComponent,
     FooterComponent,
     WelcomeComponent,
-    TopicsComponent
+    TopicsComponent,
+    TechnologyCardComponent,
+    TechnologyForumComponent
   ],
 
   // Add modules to the imports.

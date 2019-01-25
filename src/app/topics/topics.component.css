@@ -1,4 +1,6 @@
 #topicDiv {
     text-align: center;
     margin: 15px;
+    display: grid;
+    grid-template-rows: 1fr;
 }
