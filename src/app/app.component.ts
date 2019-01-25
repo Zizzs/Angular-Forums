@@ -10,6 +10,8 @@ export class AppComponent {
 
   public static topicCards = {
     name_technology: "Technology",
-    description_technology: "A place to post and discuss latest technology trends."
+    description_technology: "A place to post and discuss latest technology trends.",
+    name_angular: "Angular",
+    description_angular: "Discuss all topics relating to Angular."
   }
 }

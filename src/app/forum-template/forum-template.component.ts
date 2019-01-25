@@ -29,5 +29,5 @@ export class ForumTemplateComponent implements OnInit {
     body: "This is a test body. Please excuse the terrible design work. It's slowly coming along, i'm hoping it turns into something really cool.",
   }
 
-  posts = [this.forumPosts, this.forumPosts, this.forumPosts]
+  posts = [this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts, this.forumPosts]
 }
