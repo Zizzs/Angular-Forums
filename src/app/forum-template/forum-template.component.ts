@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-technology-forum',
@@ -11,7 +12,7 @@ export class ForumTemplateComponent implements OnInit {
   forumHeader = "";
   forumDescription = "";
 
-  constructor(private route: ActivatedRoute) { 
+  constructor(private router: Router, private route: ActivatedRoute) { 
     this.route.queryParams.subscribe(params => {
       this.forumHeader = params["header"];
       this.forumDescription = params["description"];
@@ -21,7 +22,9 @@ export class ForumTemplateComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+  goToPostPage() {
+    this.router.navigate(['topics/forum/postthread']);
+  }
   
   forumPostsDisplayBody;
   forumPosts = {

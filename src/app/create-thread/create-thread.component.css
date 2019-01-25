@@ -1,45 +1,11 @@
-#forumHeader {
-    font-size: 40px;
-    text-align: center;  
-}
-
-#forumCards {
-    margin-bottom: 5px;
-}
-
-#forumDescription {
-    text-align: center;
-}
-
-#fixedHeader {
-    text-align: center;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: gray;
-}
-
-#fixedFooter {
-    text-align: center;
-    width: 100%;
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-    background-color: gray;
-}
-
-#fixedBody {
-    position: relative;
-}
-
-
 * {box-sizing: border-box}
 
 /* Style the tab */
 .tab {
+  float: left;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  height: 300px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -47,10 +13,11 @@
   display: block;
   background-color: inherit;
   color: black;
+  padding: 22px 16px;
   width: 100%;
   border: none;
   outline: none;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -67,8 +34,9 @@
 
 /* Style the tab content */
 .tabcontent {
+  float: left;
   padding: 0px 12px;
   border: 1px solid #ccc;
   border-left: none;
-  height: 50px;
+  height: 300px;
 }

@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TopicsComponent } from './topics/topics.component';
 import { TopicCardComponent } from './topic-card/topic-card.component';
 import { ForumTemplateComponent } from './forum-template/forum-template.component';
+import { CreateThreadComponent } from './create-thread/create-thread.component';
 
 
 //Add new Components to the declarations to initialize and add a component.
@@ -25,7 +26,8 @@ import { ForumTemplateComponent } from './forum-template/forum-template.componen
     WelcomeComponent,
     TopicsComponent,
     TopicCardComponent,
-    ForumTemplateComponent
+    ForumTemplateComponent,
+    CreateThreadComponent
   ],
 
   // Add modules to the imports.
