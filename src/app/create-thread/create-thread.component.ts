@@ -24,7 +24,8 @@ export class CreateThreadComponent implements OnInit {
   }
 
   createThread(user: string, title: string, body: string) {
-    let date = new Date();
+    let dateNew = new Date();
+    let date = (dateNew.toString()).substr(0, 25);
     let thread = new Thread(user, this.forumHeader, title, body, date);
     this.threadService.addThread(thread);
   }
