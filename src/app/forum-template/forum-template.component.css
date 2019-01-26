@@ -7,6 +7,10 @@
     border: 1px solid #373737;
 }
 
+.card:hover {
+    background-color: #C0B283;
+}
+
 #forumCards {
     margin-bottom: 5px;
 }
