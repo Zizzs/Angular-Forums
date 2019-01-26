@@ -6,13 +6,13 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
   providedIn: 'root'
 })
 export class ThreadService {
-  threads: FirebaseListObservable<any[]>;
-  technologyThreads: FirebaseListObservable<any[]>;
-  angularThreads: FirebaseListObservable<any[]>;
+  threads: FirebaseListObservable<any[]>
+  //technologyThreads: FirebaseListObservable<any[]>;
+  //angularThreads: FirebaseListObservable<any[]>;
   
 
   constructor(private database: AngularFireDatabase) { 
-    this.threads = this.database.list('threads');
+    this.threads =  this.database.list('/threads');
   }
 
   getThreads() {

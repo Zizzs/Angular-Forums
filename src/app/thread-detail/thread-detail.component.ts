@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { ThreadService } from '../thread.service';
 import { Thread } from '../models/thread.model';
 import { FirebaseObjectObservable } from 'angularfire2/database';
+import { Comment } from '../models/comment.model';
 
 @Component({
   selector: 'app-thread-detail',
@@ -23,5 +24,12 @@ export class ThreadDetailComponent implements OnInit {
     });
     this.threadToDisplay = this.threadService.getThreadById(this.threadId);
   }
+
+  // createComment(user: string, body: string) {
+  //   let dateNew = new Date();
+  //   let date = (dateNew.toString()).substr(0, 25);
+  //   let comment = new Comment(user, body, date);
+  //   this.threadService.addComment(this.threadToDisplay, comment);
+  // }
 
 }

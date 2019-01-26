@@ -1,7 +1,46 @@
-<div>
-    <h3>{{(threadToDisplay | async)?.title}}</h3>
-    <h4>{{(threadToDisplay | async)?.body}}</h4>
-    <p>{{(threadToDisplay | async)?.user}}</p>
-    <p>{{(threadToDisplay | async)?.date}}</p>
-    <p>{{(threadToDisplay | async)?.topic}}</p>
+<div id="mainDetailDiv">
+  <div id="mainDetailInner">
+    <div id="detailHeader">
+      <div>
+          <p>User: {{(threadToDisplay | async)?.user}}</p>
+          <p>Topic: {{(threadToDisplay | async)?.topic}}</p>
+          <p>Date: {{(threadToDisplay | async)?.date}}</p>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <p id="detailTitle">{{(threadToDisplay | async)?.title}}</p>
+    </div>
+    <hr>
+    <div>
+      <p>{{(threadToDisplay | async)?.body}}</p>
+    </div>
   </div>
+</div>
+<hr>
+<div>
+  <p>Comments</p>
+</div>
+<hr>
+<div>
+    <div class="card card-default">
+        <div class="card-heading">
+            <h4 class="card-title">Create a comment</h4>
+        </div>
+        <div class="card-body">
+            <div>
+              <div>
+                  <label>User Name:</label>
+                  <br>
+                  <input [(ngModel)]="userName" #newUser>
+              </div>
+              <div>
+                  <label>Comment:</label>
+                  <br>
+                  <textarea [(ngModel)]="body" id="textArea" #newBody></textarea>
+              </div>
+              <button (click)="createComment(newUser.value, newBody.value); newUser.value=''; newBody.value=''">Post</button>    
+          </div>
+        </div>
+    </div>
+</div>
