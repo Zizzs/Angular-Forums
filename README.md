@@ -4,6 +4,9 @@
 
 #### By _**Alex Williams**_
 
+### Firebase Hosting Link
+_https://forums-1b1e7.firebaseapp.com/_
+
 ## Specs and Features
     1. The user must be able to enter the website and have a clear understanding of where to navigate to find a forum they want to view.
 
