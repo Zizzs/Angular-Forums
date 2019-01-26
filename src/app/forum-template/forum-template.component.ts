@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import { Router, NavigationExtras } from '@angular/router';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { ThreadService } from '../thread.service';
-
+import * as _ from 'lodash';
 import { Thread } from '../models/thread.model';
 
 
@@ -16,11 +16,12 @@ import { Thread } from '../models/thread.model';
 export class ForumTemplateComponent implements OnInit {
   threads: FirebaseListObservable<any[]>;
   //technologyThreads: FirebaseListObservable<any[]>;
-  threadsAll: FirebaseListObservable<any[]>;
+  threadsAll: any[];
+  filteredThreads: any;
   forumHeader = "";
   forumDescription = "";
-
-  constructor(private router: Router, private route: ActivatedRoute, private threadService: ThreadService) { 
+ 
+  constructor(private router: Router, private route: ActivatedRoute, private threadService: ThreadService, private database: AngularFireDatabase) { 
     this.route.queryParams.subscribe(params => {
       this.forumHeader = params["header"];
       this.forumDescription = params["description"];
@@ -28,11 +29,38 @@ export class ForumTemplateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.threadsAll = this.threadService.getThreads();
+    this.threadsAll = this.unpackThreads();
+    this.filteredThreads = this.filterThreads(this.threadsAll);
+    console.log(this.filteredThreads);
+  }
+
+  unpackThreads() {
+    let threads = [];
+    let i: number = 0;
+    this.database.list('/threads', {preserveSnapshot: true})
+      .subscribe(snapshots=>{
+        snapshots.forEach(snapshot => {
+          threads.push(snapshot.val());
+          threads[i].key = snapshot.key;
+          i++
+        });
+      })
+    return threads;
+  }
+
+  filterThreads(threadsDB) {
+    let filtered = [];
+    let topic = this.forumHeader;
+    for (let thread of threadsDB) {
+      if (thread.topic === topic) {
+        filtered.push(thread);
+      }
+    }
+    return filtered;
   }
 
   goToDetailPage(clickedThread) {
-    this.router.navigate(['topics/forum', clickedThread.$key]);
+    this.router.navigate(['topics/forum', clickedThread.key]);
   }
 
   goToPostPage() {
