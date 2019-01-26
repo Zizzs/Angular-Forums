@@ -7,34 +7,37 @@
 ## Specs and Features
     1. The user must be able to enter the website and have a clear understanding of where to navigate to find a forum they want to view.
 
-    2. The user should be able to either create an account and keep all post history on their account, or be able to post anonymously without post saving.
+    2. The user must be able to create custom threads under specific topics, and have their thread show up within the topic's section.
 
-    3. The user must be able to read, preview, and edit all comments commited to forum posts. 
+    3. The user should be able to either create an account and keep all post history on their account, or be able to post anonymously with post saving.
+
+    4. The user must be able to read, preview, and edit all comments commited to forum posts. 
+
+## Setup/Installation Requirements
+
+    -Clone from Github
+
+    -Navigate to root project directory in the terminal.
+
+    -Input npm install into the terminal to install dependancies.
+
+    -Create your own api-keys.ts file in the root folder and populate it with your own firebase credentials.
+
+    -Input ng build into the terminal.
+
+    -Input ng serve to deploy the server to localhost, or firebase deploy to deploy to your own firebase hosting.
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Known Bugs
+_No known bugs_
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+_JavaScript ES6, Angular, Firebase, Node Package Manager, Bootstrap_
 
 ### License
 
