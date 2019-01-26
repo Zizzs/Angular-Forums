@@ -12,6 +12,8 @@ export class AppComponent {
     name_technology: "Technology",
     description_technology: "A place to post and discuss latest technology trends.",
     name_angular: "Angular",
-    description_angular: "Discuss all topics relating to Angular."
+    description_angular: "Discuss all topics relating to Angular.",
+    name_react: "React",
+    description_react: "Discuss all topics relating to React"
   }
 }

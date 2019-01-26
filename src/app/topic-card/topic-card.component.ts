@@ -36,5 +36,15 @@ export class TopicCardComponent implements OnInit {
     this.router.navigate(["topics/forum"], navigationExtras)
   }
 
+  goToReactForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_react,
+        "description": this.topicCard.description_react
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
 
 }

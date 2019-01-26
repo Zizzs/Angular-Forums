@@ -15,7 +15,6 @@ import { Thread } from '../models/thread.model';
 })
 export class ForumTemplateComponent implements OnInit {
   threads: FirebaseListObservable<any[]>;
-  //technologyThreads: FirebaseListObservable<any[]>;
   threadsAll: any[];
   filteredThreads: any;
   forumHeader = "";
@@ -31,7 +30,6 @@ export class ForumTemplateComponent implements OnInit {
   ngOnInit() {
     this.threadsAll = this.unpackThreads();
     this.filteredThreads = this.filterThreads(this.threadsAll);
-    console.log(this.filteredThreads);
   }
 
   unpackThreads() {
