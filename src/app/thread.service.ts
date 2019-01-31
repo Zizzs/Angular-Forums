@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Thread } from './models/thread.model'
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThreadService {
-  threads: Thread[];
+  threads: FirebaseListObservable<any[]>;
+  threadsAll: Thread[];
 
   constructor(private database: AngularFireDatabase) { 
-    this.threads =  this.unpackThreads();
+    this.threads = database.list('threads');
+    this.threadsAll =  this.unpackThreads();
   }
 
   unpackThreads() {
@@ -28,7 +30,7 @@ export class ThreadService {
   }
 
   getThreads() {
-    return this.threads;
+    return this.threadsAll;
   }
 
   addThread(newThread: Thread) {
