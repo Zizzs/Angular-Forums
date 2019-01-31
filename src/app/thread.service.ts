@@ -23,7 +23,6 @@ export class ThreadService {
           threads.push(snapshot.val());
           threads[i].key = snapshot.key;
           i++
-          console.table(threads);
         });
       })
     return threads;
