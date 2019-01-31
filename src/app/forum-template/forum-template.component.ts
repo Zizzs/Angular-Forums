@@ -14,7 +14,7 @@ import { Thread } from '../models/thread.model';
   providers: [ThreadService]
 })
 export class ForumTemplateComponent implements OnInit {
-  threads: FirebaseListObservable<any[]>;
+  
   threadsAll: any[];
   filteredThreads: any;
   forumHeader = "";
@@ -28,23 +28,11 @@ export class ForumTemplateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.threadsAll = this.unpackThreads();
+    this.threadsAll = this.threadService.getThreads();
     this.filteredThreads = this.filterThreads(this.threadsAll);
   }
 
-  unpackThreads() {
-    let threads = [];
-    let i: number = 0;
-    this.database.list('/threads', {preserveSnapshot: true})
-      .subscribe(snapshots=>{
-        snapshots.forEach(snapshot => {
-          threads.push(snapshot.val());
-          threads[i].key = snapshot.key;
-          i++
-        });
-      })
-    return threads;
-  }
+
 
   filterThreads(threadsDB) {
     let filtered = [];

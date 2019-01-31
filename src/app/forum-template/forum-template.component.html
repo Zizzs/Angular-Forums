@@ -8,7 +8,7 @@
     <div (click)="goToDetailPage(thread)" class="card">
       <div class="card-body">
         <h5 class="card-title">{{thread.title}}</h5>
-        <p>{{thread.body}}</p>
+        <p>{{thread.body | slice:0:124}}</p>
         <p>{{thread.user}}</p>
       </div>  
     </div>
