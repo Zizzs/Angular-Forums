@@ -23,7 +23,7 @@
 </div>
 
 <div>
-  <div *ngFor="let comment of commentsToDisplay" id="forumCards">
+  <div *ngFor="let comment of commentsToDisplay | filterComments:threadId" id="forumCards">
     <div class="card">
        <div class="card-body">
           <h5 class="card-title">{{comment.user}}</h5>

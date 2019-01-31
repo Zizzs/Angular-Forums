@@ -39,7 +39,4 @@ export class CommentService {
   getCommentById(commentId: string){
     return this.database.object('comments/' + commentId);
   }
-
-
-
 }

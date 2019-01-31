@@ -17,25 +17,15 @@ export class ThreadDetailComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private threadService: ThreadService, private commentService: CommentService) { }
 
   threadId: string = null;
-  commentsToDisplay;
+  commentsToDisplay: Comment[] = [];
   threadToDisplay;
 
   ngOnInit() {
-    let allCommentsTemp = [];
-    let commentsToDisplayTemp = [];
     this.route.params.forEach((urlParameters) => {
       this.threadId = urlParameters['id'];
     });
     this.threadToDisplay = this.threadService.getThreadById(this.threadId);
-    allCommentsTemp = this.commentService.getComments();
-    for(let comment of allCommentsTemp) {
-      console.log(comment.id, this.threadId);
-      if (comment.id === this.threadId) {
-        commentsToDisplayTemp.push(comment);
-      }
-    }
-    this.commentsToDisplay = commentsToDisplayTemp;
-    
+    this.commentsToDisplay = this.commentService.getComments();
   }
 
   createComment(user: string, body: string) {
@@ -44,6 +34,7 @@ export class ThreadDetailComponent implements OnInit {
     let key = this.threadId;
     let comment = new Comment(user, body, date, key);
     this.commentService.addComment(comment);
+    location.reload();
   }
 
 }
