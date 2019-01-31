@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { ThreadService } from '../thread.service';
 import { CommentService } from '../comment.service';
 import { Thread } from '../models/thread.model';
-import { FirebaseObjectObservable } from 'angularfire2/database';
+import { FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
 import { Comment } from '../models/comment.model';
 
 @Component({
@@ -17,7 +17,8 @@ export class ThreadDetailComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private threadService: ThreadService, private commentService: CommentService) { }
 
   threadId: string = null;
-  commentsToDisplay: Comment[] = [];
+  commentsToDisplay: FirebaseListObservable<any[]>;
+  comments = [];
   threadToDisplay;
 
   ngOnInit() {
@@ -26,6 +27,9 @@ export class ThreadDetailComponent implements OnInit {
     });
     this.threadToDisplay = this.threadService.getThreadById(this.threadId);
     this.commentsToDisplay = this.commentService.getComments();
+    this.commentsToDisplay.subscribe(currentComments => {
+      this.comments = currentComments;
+    })
   }
 
   createComment(user: string, body: string) {
@@ -34,7 +38,7 @@ export class ThreadDetailComponent implements OnInit {
     let key = this.threadId;
     let comment = new Comment(user, body, date, key);
     this.commentService.addComment(comment);
-    location.reload();
+    console.log(this.comments.length);
   }
 
 }

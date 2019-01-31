@@ -11,6 +11,8 @@ export class CommentService {
 
   constructor(private database: AngularFireDatabase) { 
     this.comments = database.list('comments');
+    console.log(this.comments);
+    
     this.commentsAll =  this.unpackComments();
   }
 
@@ -29,11 +31,16 @@ export class CommentService {
   }
 
   getComments() {
-    return this.commentsAll;
+    // this.commentsAll = [];
+    // this.commentsAll = this.unpackComments();
+    // console.log(this.commentsAll.length);
+    // return this.commentsAll;
+    return this.comments;
   }
 
   addComment(newComment: Comment) {
     this.comments.push(newComment);
+    
   }
 
   getCommentById(commentId: string){

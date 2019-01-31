@@ -18,6 +18,7 @@ import { TopicCardComponent } from './topic-card/topic-card.component';
 import { ForumTemplateComponent } from './forum-template/forum-template.component';
 import { CreateThreadComponent } from './create-thread/create-thread.component';
 import { ThreadDetailComponent } from './thread-detail/thread-detail.component';
+
 import { CommentsPipe } from './filterComments.pipe';
 
 export const firebaseConfig = {

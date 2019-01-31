@@ -8,8 +8,10 @@ import {Comment} from './models/comment.model';
 
 
 export class CommentsPipe implements PipeTransform {
-  transform(input: Comment[], threadId){
+  transform(input, threadId){
+
     var output: Comment[] = [];
+    
     for (var i = 0; i < input.length; i++) {
       if (input[i].id === threadId) {
         output.push(input[i]);
