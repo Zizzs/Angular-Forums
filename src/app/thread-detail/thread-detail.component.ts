@@ -31,6 +31,7 @@ export class ThreadDetailComponent implements OnInit {
     })
   }
 
+  // Comment Creation
   createComment(user: string, body: string) {
     let dateNew = new Date();
     let date = (dateNew.toString()).substr(0, 25);

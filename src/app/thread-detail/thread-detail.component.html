@@ -21,18 +21,15 @@
     </div>
   </div>
 </div>
-
 <div>
   <p id="commentTitle">Comments:</p>
 </div>
-
 <div id="secondMain">
   <div *ngFor="let comment of comments | filterComments:threadId async" id="forumCards">
     <div class="card">
       <hr class="topBottomHr">
        <div class="mainCard" class="card-body">
           <p>{{comment.body}}</p>
-
           <p id="title" class="card-title montserrat bold">{{comment.user}}</p>
           <p>{{comment.date}}</p>
         </div>  
@@ -41,7 +38,6 @@
     </div>
 </div>
 <hr>
-
 <div id="thirdMain">
     <div class="card card-default">
         <div class="card-heading">

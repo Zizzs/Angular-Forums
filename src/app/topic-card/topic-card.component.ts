@@ -16,6 +16,7 @@ export class TopicCardComponent implements OnInit {
   
   topicCard = AppComponent.topicCards;
   
+  // Route Functions To Specific Forum Topics
   goToTechnologyForum() {
     let navigationExtras: NavigationExtras = {
       queryParams: {

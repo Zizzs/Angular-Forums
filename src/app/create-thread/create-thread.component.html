@@ -14,7 +14,6 @@
             <br>
             <input [(ngModel)]="title" #newTitle>
         </div>
-    
         <div>
             <label>Thread Body:</label>
             <br>
@@ -23,7 +22,6 @@
         <button (click)="createThread(newUser.value, newTitle.value, newBody.value); newUser.value=''; newTitle.value=''; newBody.value=''">Add</button>    </div>
     </div>
 </div>
-
 <div class="previewDiv raleway">
     <p id="previewText">Preview:</p>
     <hr>

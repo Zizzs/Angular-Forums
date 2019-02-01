@@ -1,3 +1,4 @@
+// Application Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }  from '@angular/forms';
@@ -6,8 +7,10 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { LinkyModule } from 'angular-linky';
 
+// Router Import
 import { routing } from './app.routing';
 
+// Main Application Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
@@ -19,11 +22,13 @@ import { TopicCardComponent } from './topic-card/topic-card.component';
 import { ForumTemplateComponent } from './forum-template/forum-template.component';
 import { CreateThreadComponent } from './create-thread/create-thread.component';
 import { ThreadDetailComponent } from './thread-detail/thread-detail.component';
-
-import { CommentsPipe } from './filterComments.pipe';
-import { ThreadsPipe } from './filterThreads.pipe';
 import { InfoComponent } from './info/info.component';
 
+// Application Pipes
+import { CommentsPipe } from './filterComments.pipe';
+import { ThreadsPipe } from './filterThreads.pipe';
+
+// Firebase Config Import
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
