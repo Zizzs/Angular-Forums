@@ -2,6 +2,5 @@
   <button class="sideTab tablinks montserrat bold ls-small uppercase " (click)="goToHomePage()">Home</button>
   <button class="sideTab tablinks montserrat bold ls-small uppercase" (click)="goToTopicsPage()">Topics</button>
   <button class="sideTab tablinks montserrat bold ls-small uppercase" (click)="goToInfoPage()">Info</button>
-  <button class="sideTab tablinks montserrat bold ls-small uppercase" *ngIf="isLoggedIn" (click)="logout()">Log Out</button>
-  <button class="sideTab tablinks montserrat bold ls-small uppercase"  *ngIf ="!isLoggedIn" (click)="login()">Log in</button>
+  <button class="sideTab tablinks montserrat bold ls-small uppercase" (click)="goToRandomThreadPage()">Random Thread</button>
 </div>
