@@ -88,7 +88,3 @@ section{
 }
 .wrapper.large-wrap{max-width: 100%;}
 
-/* Media queries */
- @media screen and (min-width: 1440px) {
-   section{height:700px}
- }
