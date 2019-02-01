@@ -14,6 +14,10 @@ export class AppComponent {
     name_angular: "Angular",
     description_angular: "Discuss all topics relating to Angular.",
     name_react: "React",
-    description_react: "Discuss all topics relating to React"
+    description_react: "Discuss all topics relating to React",
+    name_javascript: "JavaScript",
+    description_javascript: "Discuss all topics relating to Javascript",
+    name_general: "General",
+    description_general: "General Discussion",
   }
 }

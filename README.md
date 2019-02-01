@@ -12,9 +12,9 @@ _https://forums-1b1e7.firebaseapp.com/_
 
     2. The user must be able to create custom threads under specific topics, and have their thread show up within the topic's section.
 
-    3. The user should be able to view the detailed topics page and be able to post comments for specific threads.
+    3. The user should be able to view the detailed threads page and be able to post comments for specific threads.
 
-    4. The user must be able to read, preview, and edit all comments commited to forum posts. 
+    4. The user must be able to see when threads or comments are posted at all times. 
 
 ## Setup/Installation Requirements
 

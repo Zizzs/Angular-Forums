@@ -36,6 +36,10 @@ export class CreateThreadComponent implements OnInit {
       this.goToAngularForum();
     } else if (this.forumHeader === "React"){
       this.goToReactForum();
+    } else if (this.forumHeader === "JavaScript"){
+      this.goToJavascriptForum();
+    } else if (this.forumHeader === "General"){
+      this.goToGeneralForum();
     } else {
       this.router.navigate(["topics"]);
     }
@@ -66,6 +70,26 @@ export class CreateThreadComponent implements OnInit {
       queryParams: {
         "header": this.topicCard.name_react,
         "description": this.topicCard.description_react
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToJavascriptForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_javascript,
+        "description": this.topicCard.description_javascript
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToGeneralForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_general,
+        "description": this.topicCard.description_general
       }
     };
     this.router.navigate(["topics/forum"], navigationExtras)

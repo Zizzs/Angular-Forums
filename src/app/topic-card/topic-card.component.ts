@@ -46,5 +46,25 @@ export class TopicCardComponent implements OnInit {
     this.router.navigate(["topics/forum"], navigationExtras)
   }
 
+  goToJavascriptForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_javascript,
+        "description": this.topicCard.description_javascript
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToGeneralForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_general,
+        "description": this.topicCard.description_general
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
 
 }
