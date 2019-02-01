@@ -19,9 +19,22 @@ _https://forums-1b1e7.firebaseapp.com/_
 
     4. The user must be able to see when threads or comments are posted at all times. 
 
-##Features
-![](https://i.gyazo.com/9fd331685123e4f4fb3b6d1087df8ddc.mp4)
+## Features
+### Routing:
 
+![](https://i.gyazo.com/9fd331685123e4f4fb3b6d1087df8ddc.gif)
+
+### Thread Creation:
+
+![](https://i.gyazo.com/59a9ceee622f9882c5e56ee579a77c5e.gif)
+
+### Comment Creation:
+
+![](https://i.gyazo.com/e4f11005ecb2277a998f8ab03eb8594f.gif)
+
+### Random Thread(with refresh):
+
+![](https://i.gyazo.com/92ef5367dfec9da350e301ff8aa1b370.gif)
 ## Setup/Installation Requirements
 
     -Clone from Github
