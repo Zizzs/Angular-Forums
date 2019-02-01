@@ -32,9 +32,9 @@ _https://forums-1b1e7.firebaseapp.com/_
 
 ![](https://i.gyazo.com/e4f11005ecb2277a998f8ab03eb8594f.gif)
 
-### Random Thread(with refresh):
+### Random Thread:
 
-![](https://i.gyazo.com/92ef5367dfec9da350e301ff8aa1b370.gif)
+![](https://i.gyazo.com/6c3cefeec9e97df501817ca7b57e7366.gif)
 ## Setup/Installation Requirements
 
     -Clone from Github
