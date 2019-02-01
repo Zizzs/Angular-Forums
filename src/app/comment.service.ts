@@ -7,34 +7,12 @@ import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/databas
 })
 export class CommentService {
   comments: FirebaseListObservable<any[]>;
-  commentsAll: Comment[];
 
   constructor(private database: AngularFireDatabase) { 
     this.comments = database.list('comments');
-    console.log(this.comments);
-    
-    this.commentsAll =  this.unpackComments();
-  }
-
-  unpackComments() {
-    let comments = [];
-    let i: number = 0;
-    this.database.list('/comments', {preserveSnapshot: true})
-      .subscribe(snapshots=>{
-        snapshots.forEach(snapshot => {
-          comments.push(snapshot.val());
-          comments[i].key = snapshot.key;
-          i++
-        });
-      })
-    return comments;
   }
 
   getComments() {
-    // this.commentsAll = [];
-    // this.commentsAll = this.unpackComments();
-    // console.log(this.commentsAll.length);
-    // return this.commentsAll;
     return this.comments;
   }
 

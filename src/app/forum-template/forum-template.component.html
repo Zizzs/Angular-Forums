@@ -5,7 +5,7 @@
     <hr>
   </div>
   <div id="fixedBody">
-    <div *ngFor="let thread of filteredThreads" id="forumCards">
+    <div *ngFor="let thread of threads | filterThreads:forumHeader async" id="forumCards">
       <div (click)="goToDetailPage(thread)" class="card">
         <div class="card-body">
           <p class="montserrat upper bold card-title">{{thread.title}}</p>

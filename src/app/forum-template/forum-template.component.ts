@@ -15,8 +15,8 @@ import { Thread } from '../models/thread.model';
 })
 export class ForumTemplateComponent implements OnInit {
   
-  threadsAll: any[];
-  filteredThreads: any;
+  threadsAll: FirebaseListObservable<any[]>;
+  threads = [];
   forumHeader = "";
   forumDescription = "";
  
@@ -29,24 +29,13 @@ export class ForumTemplateComponent implements OnInit {
 
   ngOnInit() {
     this.threadsAll = this.threadService.getThreads();
-    this.filteredThreads = this.filterThreads(this.threadsAll);
-  }
-
-
-
-  filterThreads(threadsDB) {
-    let filtered = [];
-    let topic = this.forumHeader;
-    for (let thread of threadsDB) {
-      if (thread.topic === topic) {
-        filtered.push(thread);
-      }
-    }
-    return filtered;
+    this.threadsAll.subscribe(currentThreads => {
+      this.threads = currentThreads;
+    })
   }
 
   goToDetailPage(clickedThread) {
-    this.router.navigate(['topics/forum', clickedThread.key]);
+    this.router.navigate(['topics/forum', clickedThread.$key]);
   }
 
   goToPostPage() {
