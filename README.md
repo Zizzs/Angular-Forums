@@ -1,4 +1,4 @@
-# _Some Random Forum_
+# _Website Development Forum_
 
 #### A simplistic forum that can be used for any sort of topics.
 
