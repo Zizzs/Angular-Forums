@@ -10,7 +10,7 @@ This forum uses Angular to create a quick and reactive foroum experience. It con
 ### Firebase Hosting Link
 _https://forums-1b1e7.firebaseapp.com/_
 
-## Specs and Features
+## Specs
     1. The user must be able to enter the website and have a clear understanding of where to navigate to find a forum they want to view.
 
     2. The user must be able to create custom threads under specific topics, and have their thread show up within the topic's section.
@@ -18,6 +18,9 @@ _https://forums-1b1e7.firebaseapp.com/_
     3. The user should be able to view the detailed threads page and be able to post comments for specific threads.
 
     4. The user must be able to see when threads or comments are posted at all times. 
+
+##Features
+![](https://i.gyazo.com/9fd331685123e4f4fb3b6d1087df8ddc.mp4)
 
 ## Setup/Installation Requirements
 
