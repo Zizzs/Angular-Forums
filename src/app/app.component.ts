@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Forums';
+  title = 'Web Development Forums';
  
+  // The main info block for Topic headers and descriptions.
   public static topicCards = {
     name_technology: "Technology",
     description_technology: "A place to post and discuss latest technology trends.",

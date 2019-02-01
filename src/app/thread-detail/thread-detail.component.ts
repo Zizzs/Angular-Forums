@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router, NavigationExtras, ActivatedRoute, Params } from '@angular/router';
+import {  Router, ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { ThreadService } from '../thread.service';
 import { CommentService } from '../comment.service';
-import { Thread } from '../models/thread.model';
-import { FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseListObservable } from 'angularfire2/database';
 import { Comment } from '../models/comment.model';
 
 @Component({
@@ -14,7 +13,7 @@ import { Comment } from '../models/comment.model';
 })
 export class ThreadDetailComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute, private location: Location, private threadService: ThreadService, private commentService: CommentService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private threadService: ThreadService, private commentService: CommentService) { }
 
   threadId: string = null;
   commentsToDisplay: FirebaseListObservable<any[]>;

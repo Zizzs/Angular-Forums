@@ -6,6 +6,7 @@ import {Comment} from './models/comment.model';
   pure: false
 })
 
+// This pipe filters comments based off the thread ID that they were posted in, so that they are only seen within that thread.
 
 export class CommentsPipe implements PipeTransform {
   transform(input, threadId){

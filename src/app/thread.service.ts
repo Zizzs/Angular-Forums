@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Thread } from './models/thread.model'
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
+//The service grabs all threads from Firebase, and then populates the application with threads when called.
+
 @Injectable({
   providedIn: 'root'
 })

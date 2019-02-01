@@ -6,6 +6,7 @@ import {Thread} from './models/thread.model';
   pure: false
 })
 
+//This pipe filters threads based off of the topic that the thread was posted in, allowing for them to only be seen in that topic.
 
 export class ThreadsPipe implements PipeTransform {
   transform(input, forumHeader){

@@ -4,7 +4,6 @@ import { Router, NavigationExtras } from '@angular/router';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { ThreadService } from '../thread.service';
 import * as _ from 'lodash';
-import { Thread } from '../models/thread.model';
 
 
 @Component({

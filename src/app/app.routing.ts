@@ -6,9 +6,9 @@ import { ForumTemplateComponent } from './forum-template/forum-template.componen
 import { CreateThreadComponent } from './create-thread/create-thread.component';
 import { ThreadDetailComponent } from './thread-detail/thread-detail.component';
 import { InfoComponent } from './info/info.component';
-// Import Components to add to the router.
 
 
+// All main routes for the application.
 
 const appRoutes: Routes = [ 
     {

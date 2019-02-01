@@ -5,6 +5,8 @@ import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/databas
 @Injectable({
   providedIn: 'root'
 })
+
+// This is the service that connects to Firebase and manages populating the application with comments.
 export class CommentService {
   comments: FirebaseListObservable<any[]>;
 
