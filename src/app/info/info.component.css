@@ -1,16 +1,7 @@
-#textArea {
-    width: 500px;
-    height: 200px;
-}
-
-.previewDiv {
+.infoDiv {
     margin: 15px;
     color: #E7DFDD;
     font-weight: bold;
-}
-
-.whiteText {
-    color: #E7DFDD;
 }
 
 #topHeader {
@@ -19,9 +10,5 @@
 }
 hr {
     background-color: #E7DFDD;
-}
-
-#previewText {
-    font-size: 35px;
 }
 .raleway{font-family: 'Raleway'}

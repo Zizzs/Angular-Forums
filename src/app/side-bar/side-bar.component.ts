@@ -20,4 +20,8 @@ export class SideBarComponent implements OnInit {
   goToHomePage() {
     this.router.navigate(['']);
   }
+
+  goToInfoPage() {
+    this.router.navigate(['info']);
+  }
 }

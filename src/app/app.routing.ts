@@ -5,6 +5,7 @@ import { TopicsComponent } from './topics/topics.component';
 import { ForumTemplateComponent } from './forum-template/forum-template.component';
 import { CreateThreadComponent } from './create-thread/create-thread.component';
 import { ThreadDetailComponent } from './thread-detail/thread-detail.component';
+import { InfoComponent } from './info/info.component';
 // Import Components to add to the router.
 
 
@@ -29,6 +30,10 @@ const appRoutes: Routes = [
     {
         path: 'topics/forum/:id',
         component: ThreadDetailComponent
+    },
+    {
+        path: 'info',
+        component: InfoComponent
     }
 ];
 

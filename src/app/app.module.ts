@@ -21,6 +21,7 @@ import { ThreadDetailComponent } from './thread-detail/thread-detail.component';
 
 import { CommentsPipe } from './filterComments.pipe';
 import { ThreadsPipe } from './filterThreads.pipe';
+import { InfoComponent } from './info/info.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -44,7 +45,8 @@ export const firebaseConfig = {
     CreateThreadComponent,
     ThreadDetailComponent,
     CommentsPipe,
-    ThreadsPipe
+    ThreadsPipe,
+    InfoComponent
   ],
 
   // Add modules to the imports.

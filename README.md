@@ -12,7 +12,7 @@ _https://forums-1b1e7.firebaseapp.com/_
 
     2. The user must be able to create custom threads under specific topics, and have their thread show up within the topic's section.
 
-    3. The user should be able to either create an account and keep all post history on their account, or be able to post anonymously with post saving.
+    3. The user should be able to view the detailed topics page and be able to post comments for specific threads.
 
     4. The user must be able to read, preview, and edit all comments commited to forum posts. 
 
