@@ -1,4 +1,14 @@
-#welcomeDiv {
-    text-align: center;
+.welcomeDiv {
     margin: 15px;
+    color: #E7DFDD;
+    font-weight: bold;
 }
+
+#topHeader {
+    font-size: 50px;
+    text-align: center;
+}
+hr {
+    background-color: #E7DFDD;
+}
+.raleway{font-family: 'Raleway'}

@@ -1,14 +1,19 @@
 #forumHeader {
     font-size: 40px;
-    text-align: center;  
+    text-align: center;
+    background-color: #E7DFDD;
 }
 
 .card {
     border: 1px solid #373737;
+    background-color: #E7DFDD;
+    border-radius: 15px;
 }
 
 .card:hover {
-    background-color: #C0B283;
+    background-color: #0E0B16;
+    color: #4717F6;
+    border: 3px solid #E7DFDD;
 }
 
 #forumCards {
@@ -18,14 +23,14 @@
 #forumDescription {
     text-align: center;
 }
-
 #fixedHeader {
     text-align: center;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: #F4F4F4;
+    background-color: #E7DFDD;
+    border-radius: 15px;
 }
 
 #fixedFooter {
@@ -34,25 +39,33 @@
     position: sticky;
     bottom: 0;
     z-index: 10;
-    background-color: #F4F4F4;
+    background-color: #0E0B16;
+    border-radius: 15px;
 }
 
-#fixedBody {
-    position: relative;
-}
+
 
 
 * {box-sizing: border-box}
 
 /* Style the tab */
 .tab {
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #E7DFDD;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  border-radius: 15px;
+  
 }
+
+.montserrat{font-family: 'Montserrat'}
+.raleway{font-family: 'Raleway'}
+.bold{font-weight: 700;}
+.ls-small{letter-spacing: 2px;}
+.uppercase{text-transform: uppercase;}
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  display: block;
   background-color: inherit;
   color: black;
   width: 100%;
@@ -61,22 +74,24 @@
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 15px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #0E0B16;
+  border: 2px solid #4717F6;
+  border-radius: 15px;
+  color: #4717F6;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #E7DFDD;
 }
 
 /* Style the tab content */
 .tabcontent {
   padding: 0px 12px;
-  border: 1px solid #ccc;
-  border-left: none;
   height: 50px;
 }

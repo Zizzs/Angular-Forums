@@ -1,55 +1,63 @@
 <div id="mainDetailDiv">
   <div id="mainDetailInner">
-    <div id="detailHeader">
+    <div class="raleway bold"id="detailHeader">
       <div>
-          <p>User: {{(threadToDisplay | async)?.user}}</p>
-          <p>Topic: {{(threadToDisplay | async)?.topic}}</p>
-          <p>Date: {{(threadToDisplay | async)?.date}}</p>
+        <p>User: {{(threadToDisplay | async)?.user}}</p>
+      </div>
+      <div>
+        <p>Topic: {{(threadToDisplay | async)?.topic}}</p>
+      </div>
+      <div>
+        <p>Date: {{(threadToDisplay | async)?.date}}</p>
       </div>
     </div>
     <hr>
     <div>
-      <p id="detailTitle">{{(threadToDisplay | async)?.title}}</p>
+      <p class="montserrat bold"id="detailTitle">{{(threadToDisplay | async)?.title}}</p>
     </div>
     <hr>
     <div>
-      <p>{{(threadToDisplay | async)?.body}}</p>
+      <p class="raleway">{{(threadToDisplay | async)?.body}}</p>
     </div>
   </div>
 </div>
-<hr>
-<div>
-  <p id="commentTitle">Comments</p>
-</div>
 
 <div>
+  <p id="commentTitle">Comments:</p>
+</div>
+
+<div id="secondMain">
   <div *ngFor="let comment of comments | filterComments:threadId async" id="forumCards">
     <div class="card">
-       <div class="card-body">
-          <h5 class="card-title">{{comment.user}}</h5>
+      <hr class="topBottomHr">
+       <div class="mainCard" class="card-body">
           <p>{{comment.body}}</p>
+
+          <p id="title" class="card-title montserrat bold">{{comment.user}}</p>
           <p>{{comment.date}}</p>
         </div>  
+        <hr class="topBottomHr">
       </div>
     </div>
 </div>
 <hr>
-<div>
+
+<div id="thirdMain">
     <div class="card card-default">
         <div class="card-heading">
-            <h4 class="card-title">Create a comment</h4>
+            <h4 id="commentTitle" class="card-title montserrat bold">Create a comment</h4>
         </div>
         <div class="card-body">
             <div>
               <div>
-                  <label>User Name:</label>
+                  <label class="raleway">User Name:</label>
                   <br>
                   <input [(ngModel)]="userName" #newUser>
               </div>
               <div>
-                  <label>Comment:</label>
+                  <label class="raleway">Comment:</label>
                   <br>
-                  <textarea [(ngModel)]="body" id="textArea" #newBody></textarea>
+                  <textarea [(ngModel)]="body"  class="raleway" id="textArea" #newBody></textarea>
               </div>
               <button (click)="createComment(newUser.value, newBody.value); newUser.value=''; newBody.value=''">Post</button>    
           </div>

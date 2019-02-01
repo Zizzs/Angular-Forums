@@ -1,23 +1,25 @@
-<div id="fixedHeader">
-  <p id="forumHeader">{{forumHeader}}</p>
-  <p id="forumDescription">{{forumDescription}}</p>
-  <hr>
-</div>
-<div id="fixedBody">
-  <div *ngFor="let thread of filteredThreads" id="forumCards">
-    <div (click)="goToDetailPage(thread)" class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{thread.title}}</h5>
-        <p>{{thread.body | slice:0:124}}</p>
-        <p>{{thread.user}}</p>
-      </div>  
+<div id="mainDiv">
+  <div id="fixedHeader">
+    <p id="forumHeader" class="montserrat upper bold ">{{forumHeader}}</p>
+    <p id="forumDescription" class="raleway">{{forumDescription}}</p>
+    <hr>
+  </div>
+  <div id="fixedBody">
+    <div *ngFor="let thread of filteredThreads" id="forumCards">
+      <div (click)="goToDetailPage(thread)" class="card">
+        <div class="card-body">
+          <p class="montserrat upper bold card-title">{{thread.title}}</p>
+          <p class="raleway">{{thread.body | slice:0:124}}</p>
+          <p class="raleway">{{thread.user}}</p>
+        </div>  
+      </div>
     </div>
   </div>
-</div>
-<div id="fixedFooter">
-    <div class="tab">
-      <button class="tablinks" (click)="goToPostPage()">Create a Thread</button>
-    </div>
+  <div id="fixedFooter">
+      <div class="tab montserrat bold uppercase">
+        <button class="tablinks  montserrat bold uppercase" (click)="goToPostPage()">Create a Thread</button>
+      </div>
+  </div>
 </div>
 
 

@@ -1,8 +1,7 @@
 #mainBlockDiv {
-    border: 2px solid #C0B283;
     margin-top: 15px;
     margin-left: 15px;
-    height: 725px;
+    height: 650px;
     overflow-y: scroll;
-    background-color: #F4F4F4;
+    background-color: #0E0B16;
 }
