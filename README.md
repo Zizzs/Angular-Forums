@@ -1,8 +1,11 @@
-# _Forum Template_
+# _Some Random Forum_
 
-#### A forum template that uses angular to speed up the ability to read/write forum posts.
+#### A simplistic forum that can be used for any sort of topics.
 
 #### By _**Alex Williams**_
+
+## Description
+This forum uses Angular to create a quick and reactive foroum experience. It contains all of the basic forum features, such as thread creation and post creation. All threads and posts are filtered to their respective positions in relation to the topic or thread keys.
 
 ### Firebase Hosting Link
 _https://forums-1b1e7.firebaseapp.com/_
@@ -24,7 +27,7 @@ _https://forums-1b1e7.firebaseapp.com/_
 
     -Input npm install into the terminal to install dependancies.
 
-    -Create your own api-keys.ts file in the root folder and populate it with your own firebase credentials.
+    -Create your own api-keys.ts file in the app folder and populate it with your own firebase credentials.
 
     -Input ng build into the terminal.
 

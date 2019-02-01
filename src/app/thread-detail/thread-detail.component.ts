@@ -38,7 +38,7 @@ export class ThreadDetailComponent implements OnInit {
     let key = this.threadId;
     let comment = new Comment(user, body, date, key);
     this.commentService.addComment(comment);
-    console.log(this.comments.length);
+    
   }
 
 }
