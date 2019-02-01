@@ -66,5 +66,36 @@ export class TopicCardComponent implements OnInit {
     this.router.navigate(["topics/forum"], navigationExtras)
   }
 
+  goToCsharpForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_Csharp,
+        "description": this.topicCard.description_Csharp
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToPythonForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_python,
+        "description": this.topicCard.description_python
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToDjangoForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_django,
+        "description": this.topicCard.description_django
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+
 
 }

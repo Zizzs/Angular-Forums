@@ -4,6 +4,7 @@ import { FormsModule }  from '@angular/forms';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { LinkyModule } from 'angular-linky';
 
 import { routing } from './app.routing';
 
@@ -55,7 +56,8 @@ export const firebaseConfig = {
     routing,
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    LinkyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

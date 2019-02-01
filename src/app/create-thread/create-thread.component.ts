@@ -40,6 +40,12 @@ export class CreateThreadComponent implements OnInit {
       this.goToJavascriptForum();
     } else if (this.forumHeader === "General"){
       this.goToGeneralForum();
+    } else if (this.forumHeader === "C#"){
+      this.goToCsharpForum();
+    } else if (this.forumHeader === "Python") {
+      this.goToPythonForum();
+    } else if (this.forumHeader === "Django") {
+      this.goToDjangoForum();
     } else {
       this.router.navigate(["topics"]);
     }
@@ -90,6 +96,36 @@ export class CreateThreadComponent implements OnInit {
       queryParams: {
         "header": this.topicCard.name_general,
         "description": this.topicCard.description_general
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToCsharpForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_Csharp,
+        "description": this.topicCard.description_Csharp
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToPythonForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_python,
+        "description": this.topicCard.description_python
+      }
+    };
+    this.router.navigate(["topics/forum"], navigationExtras)
+  }
+
+  goToDjangoForum() {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "header": this.topicCard.name_django,
+        "description": this.topicCard.description_django
       }
     };
     this.router.navigate(["topics/forum"], navigationExtras)
